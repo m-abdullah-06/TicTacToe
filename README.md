@@ -70,7 +70,7 @@
 ## 🧩 Project Structure
 
 
-TicTacToe/
+```TicTacToe/
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
@@ -107,7 +107,7 @@ TicTacToe/
 └── vite.config.js
 
 
-
+```
 ---
 
 ## 🛠️ Built With
