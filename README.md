@@ -1,16 +1,160 @@
-# React + Vite
+<!-- PROJECT HEADER -->
+<h1 align="center">🎮 Tic Tac Toe – Advanced React Edition</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <b>A feature-rich, modern Tic Tac Toe game built with React.</b><br/>
+  Clean architecture. Smart AI. Persistent state. Polished UI.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/State%20Management-React%20Hooks-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Storage-localStorage-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Made%20By-Muhammad%20Abdullah-purple?style=for-the-badge"/>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 **Live Preview:** //
+📂 **Repository:** [TicTacToe](https://github.com/m-abdullah-06/TicTacToe/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+### 🎯 Core Gameplay
+- 🧑‍🤝‍🧑 Player vs Player Mode  
+- 🤖 Player vs AI Mode  
+- 🏆 Automatic Winner Detection  
+- 🤝 Draw Detection  
+- 🔄 Restart Game Anytime  
+
+---
+
+### 🧠 AI Opponent
+- Smart move selection  
+- Optimized decision logic  
+- Instant response gameplay  
+
+---
+
+### 🕓 Move History System
+- Full move tracking  
+- Jump to previous moves  
+- Undo functionality  
+- Time-travel gameplay logic  
+
+---
+
+### 🏆 Persistent Scoreboard
+- Tracks:
+  - ❌ Player X Wins  
+  - ⭕ Player O Wins  
+  - 🤝 Draw Count  
+- Data stored using **localStorage**
+- Survives page refresh  
+
+---
+
+### 🎨 UI & Experience
+- Clean centered layout  
+- Responsive design  
+- Interactive game feedback  
+- Modern visual styling  
+
+---
+
+## 🧩 Project Structure
+
+
+src/
+│
+├── components/
+│ ├── Board.jsx
+│ ├── Square.jsx
+│ ├── Scoreboard.jsx
+│ ├── GameStatus.jsx
+│ └── ThemeToggle.jsx
+│ └── ResetButton.jsx
+│
+├── hooks/
+| └── useai.js
+| └── useGameHistory.js
+| └── useGameLogic.js
+| └── Usescoreboard.js
+| └── useTheme.js
+|
+├── styles/
+│ └── theme.css
+|
+├── utils/
+│ └── calculateWinner.js
+│ └── minimax.js
+│
+├── App.jsx
+└── main.jsx
+
+
+---
+
+## 🛠️ Built With
+
+- ⚛️ React 
+- 🧠 useState
+- 🔄 useEffect
+- 💾 localStorage API
+- 🎨 CSS / Tailwind 
+
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/tic-tac-toe-react.git
+cd tic-tac-toe-react
+npm install
+npm run dev
+
+```
+
+🧠 What This Project Demonstrates
+
+✔ Advanced React state management
+✔ Derived state calculations
+✔ Component-based architecture
+✔ Clean folder structure
+✔ Game logic separation
+✔ Persistent storage handling
+✔ AI logic implementation
+✔ Scalable design patterns
+
+🔮 Future Enhancements
+
+🧠 Minimax AI upgrade
+
+🔊 Sound effects
+
+🎬 Win animations
+
+🌍 Online multiplayer (Firebase / WebSockets)
+
+
+👨‍💻 Author
+
+Muhammad Abdullah
+Frontend Developer | React Enthusiast
+
+💼 Building modern web applications
+🚀 Focused on performance, UI, and scalability
+
+⭐ Support
+
+If you like this project:
+
+🌟 Star the repository
+🍴 Fork it
+📢 Share it
+
+<p align="center"> Built with ❤️ and React </p> 
