@@ -10,7 +10,7 @@ export function useGameLogic() {
   const currentPlayer = isXTurn ? "X" : "O";
 
   function handlePlay(index) {
-    if (squares[index] || winner) return;
+    if (squares[index] || winner || isDraw) return;
     const next = [...squares];
     next[index] = currentPlayer;
     setSquares(next);
@@ -22,5 +22,20 @@ export function useGameLogic() {
     setIsXTurn(true);
   }
 
-  return { squares, currentPlayer, winner, isDraw, handlePlay, resetGame };
+  function loadSquares(nextSquares) {
+    setSquares([...nextSquares]);
+    const moveCount = nextSquares.filter(Boolean).length;
+    setIsXTurn(moveCount % 2 === 0);
+  }
+
+  return {
+    squares,
+    currentPlayer,
+    winner,
+    isDraw,
+    isXTurn,
+    handlePlay,
+    resetGame,
+    loadSquares,
+  };
 }
