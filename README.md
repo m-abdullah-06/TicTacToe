@@ -70,11 +70,9 @@
 ## 🧩 Project Structure
 
 TicTacToe/
-│
 ├── public/
 │
 ├── src/
-│   │
 │   ├── app/
 │   │   ├── App.jsx
 │   │   └── main.jsx
@@ -87,9 +85,9 @@ TicTacToe/
 │   │   │   ├── MoveHistory.jsx
 │   │   │   └── ResetButton.jsx
 │   │   │
-│   │   ├── ui/
-│   │   │   ├── ScoreBoard.jsx
-│   │   │   └── ThemeToggle.jsx
+│   │   └── ui/
+│   │       ├── ScoreBoard.jsx
+│   │       └── ThemeToggle.jsx
 │   │
 │   ├── hooks/
 │   │   ├── useGameLogic.js
@@ -109,7 +107,8 @@ TicTacToe/
 │   └── assets/
 │
 ├── package.json
-└── vite.config.js
+├── vite.config.js
+└── README.md
 ---
 
 ## 🛠️ Built With
