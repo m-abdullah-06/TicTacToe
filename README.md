@@ -69,45 +69,47 @@
 
 ## 🧩 Project Structure
 
-
-```TicTacToe/
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package-lock.json
-├── package.json
+TicTacToe/
+│
 ├── public/
-│   └── vite.svg
-├── README.md
+│
 ├── src/
-│   ├── App.jsx
-│   ├── assets/
-│   │   └── react.svg
+│   │
+│   ├── app/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
 │   ├── components/
-│   │   ├── Board.jsx
-│   │   ├── GameStatus.jsx
-│   │   ├── MoveHistory.jsx
-│   │   ├── ResetButton.jsx
-│   │   ├── ScoreBoard.jsx
-│   │   ├── Square.jsx
-│   │   └── Themetoggle.jsx
+│   │   ├── game/
+│   │   │   ├── Board.jsx
+│   │   │   ├── Square.jsx
+│   │   │   ├── GameStatus.jsx
+│   │   │   ├── MoveHistory.jsx
+│   │   │   └── ResetButton.jsx
+│   │   │
+│   │   ├── ui/
+│   │   │   ├── ScoreBoard.jsx
+│   │   │   └── ThemeToggle.jsx
+│   │
 │   ├── hooks/
-│   │   ├── useai.js
-│   │   ├── useGameHistory.js
 │   │   ├── useGameLogic.js
-│   │   ├── Usescoreboard.js
+│   │   ├── useGameHistory.js
+│   │   ├── useAI.js
+│   │   ├── useScoreboard.js
 │   │   └── useTheme.js
-│   ├── index.css
-│   ├── main.jsx
+│   │
+│   ├── utils/
+│   │   ├── calculateWinner.js
+│   │   └── minimax.js
+│   │
 │   ├── styles/
+│   │   ├── index.css
 │   │   └── theme.css
-│   └── utils/
-│       ├── calculateWinner.js
-│       └── minimax.js
+│   │
+│   └── assets/
+│
+├── package.json
 └── vite.config.js
-
-
-```
 ---
 
 ## 🛠️ Built With
