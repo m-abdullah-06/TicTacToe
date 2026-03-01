@@ -14,11 +14,11 @@ function loadScores() {
 function saveScores(scores) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(scores));
 }
+
 export function useScoreboard() {
   const [scores, setScores] = useState(loadScores);
 
   function recordResult(winner) {
-    // winner is "X", "O", or null (draw)
     setScores((prev) => {
       const updated = {
         ...prev,
