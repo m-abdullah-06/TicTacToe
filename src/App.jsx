@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useGameLogic } from "./hooks/useGameLogic";
 import { useGameHistory } from "./hooks/useGameHistory";
-import { useScoreboard } from "./hooks/useScoreboard";
+import { useScoreboard } from "./hooks/Usescoreboard";
 import { useTheme } from "./hooks/useTheme";
 import { useAI } from "./hooks/useai";
 
