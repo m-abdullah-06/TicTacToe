@@ -72,48 +72,26 @@
 
 ---
 
-## 🧩 Project Structure
+---
 
-TicTacToe/
-├── public/
-│
-├── src/
-│ ├── app/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ │
-│ ├── components/
-│ │ ├── game/
-│ │ │ ├── Board.jsx
-│ │ │ ├── Square.jsx
-│ │ │ ├── GameStatus.jsx
-│ │ │ ├── MoveHistory.jsx
-│ │ │ └── ResetButton.jsx
-│ │ │
-│ │ └── ui/
-│ │ ├── ScoreBoard.jsx
-│ │ └── ThemeToggle.jsx
-│ │
-│ ├── hooks/
-│ │ ├── useGameLogic.js
-│ │ ├── useGameHistory.js
-│ │ ├── useAI.js
-│ │ ├── useScoreboard.js
-│ │ └── useTheme.js
-│ │
-│ ├── utils/
-│ │ ├── calculateWinner.js
-│ │ └── minimax.js
-│ │
-│ ├── styles/
-│ │ ├── index.css
-│ │ └── theme.css
-│ │
-│ └── assets/
-│
-├── package.json
-├── vite.config.js
-└── README.md
+## Project Structure
+
+```
+src/
+├── App.jsx                  # Main component, layout, and injected design system
+├── hooks/
+│   ├── useGameLogic.js      # Board state, turn tracking, win/draw detection
+│   ├── useGameHistory.js    # Move history array and time-travel (jumpTo)
+│   ├── useScoreboard.js     # Persistent scores via localStorage
+│   ├── useTheme.js          # Dark/light theme with localStorage + OS preference
+│   └── useai.js             # AI trigger hook (watches turn, fires after 400ms delay)
+├── utils/
+│   ├── calculateWinner.js   # Win-line checker
+│   └── minimax.js           # Minimax + alpha-beta pruning + difficulty blunder
+└── styles/
+    └── theme.css            # CSS variables for light/dark theme (legacy, overridden by App.jsx)
+```
+
 
 ---
 
@@ -128,8 +106,8 @@ TicTacToe/
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe-react.git
-cd tic-tac-toe-react
+git clone https://github.com/your-username/TicTacToe.git
+cd TicTacToe
 npm install
 npm run dev
 
