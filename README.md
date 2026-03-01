@@ -1,119 +1,175 @@
-# Tic Tac Toe
+<!-- PROJECT HEADER -->
+<h1 align="center">🎮 Tic Tac Toe – Advanced React Edition</h1>
 
-A polished, feature-rich Tic Tac Toe game built with React. Play against a Minimax-powered AI or challenge a friend locally — all in a clean dark/light themed UI.
+<p align="center">
+  <b>A feature-rich, modern Tic Tac Toe game built with React.</b><br/>
+  Clean architecture. Smart AI. Persistent state. Polished UI.
+</p>
 
----
-
-## Features
-
-- **AI Opponent** — Minimax algorithm with alpha-beta pruning. Set to moderate difficulty (90% optimal, 10% random blunder) so you actually have a fighting chance
-- **2 Player Mode** — toggle between VS AI and local 2-player at any time
-- **Persistent Scoreboard** — wins, losses, and draws saved to `localStorage` and survive page refreshes
-- **Move History & Time Travel** — every move is logged; click any entry in the sidebar to jump back to that board state
-- **Dark / Light Theme** — respects your OS preference by default, togglable via the header button
-- **Animations** — pop-in on cell placement, pulse glow on winning cells
-
----
-
-## Project Structure
-
-```
-src/
-├── App.jsx                  # Main component, layout, and injected design system
-├── hooks/
-│   ├── useGameLogic.js      # Board state, turn tracking, win/draw detection
-│   ├── useGameHistory.js    # Move history array and time-travel (jumpTo)
-│   ├── useScoreboard.js     # Persistent scores via localStorage
-│   ├── useTheme.js          # Dark/light theme with localStorage + OS preference
-│   └── useai.js             # AI trigger hook (watches turn, fires after 400ms delay)
-├── utils/
-│   ├── calculateWinner.js   # Win-line checker
-│   └── minimax.js           # Minimax + alpha-beta pruning + difficulty blunder
-└── styles/
-    └── theme.css            # CSS variables for light/dark theme (legacy, overridden by App.jsx)
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/State%20Management-React%20Hooks-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Storage-localStorage-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Made%20By-Muhammad%20Abdullah-purple?style=for-the-badge"/>
+</p>
 
 ---
 
-## Getting Started
+## 🚀 Live Demo
 
-### Prerequisites
+🔗 **Live Preview:** //
+📂 **Repository:** [TicTacToe](https://github.com/m-abdullah-06/TicTacToe/)
 
-- Node.js 18+
-- npm or yarn
+---
 
-### Install & Run
+## ✨ Features
+
+### 🎯 Core Gameplay
+
+- 🧑‍🤝‍🧑 Player vs Player Mode
+- 🤖 Player vs AI Mode
+- 🏆 Automatic Winner Detection
+- 🤝 Draw Detection
+- 🔄 Restart Game Anytime
+
+---
+
+### 🧠 AI Opponent
+
+- Smart move selection
+- Optimized decision logic
+- Instant response gameplay
+
+---
+
+### 🕓 Move History System
+
+- Full move tracking
+- Jump to previous moves
+- Undo functionality
+- Time-travel gameplay logic
+
+---
+
+### 🏆 Persistent Scoreboard
+
+- Tracks:
+  - ❌ Player X Wins
+  - ⭕ Player O Wins
+  - 🤝 Draw Count
+- Data stored using **localStorage**
+- Survives page refresh
+
+---
+
+### 🎨 UI & Experience
+
+- Clean centered layout
+- Responsive design
+- Interactive game feedback
+- Modern visual styling
+
+---
+
+## 🧩 Project Structure
+
+TicTacToe/
+├── public/
+│
+├── src/
+│ ├── app/
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ │
+│ ├── components/
+│ │ ├── game/
+│ │ │ ├── Board.jsx
+│ │ │ ├── Square.jsx
+│ │ │ ├── GameStatus.jsx
+│ │ │ ├── MoveHistory.jsx
+│ │ │ └── ResetButton.jsx
+│ │ │
+│ │ └── ui/
+│ │ ├── ScoreBoard.jsx
+│ │ └── ThemeToggle.jsx
+│ │
+│ ├── hooks/
+│ │ ├── useGameLogic.js
+│ │ ├── useGameHistory.js
+│ │ ├── useAI.js
+│ │ ├── useScoreboard.js
+│ │ └── useTheme.js
+│ │
+│ ├── utils/
+│ │ ├── calculateWinner.js
+│ │ └── minimax.js
+│ │
+│ ├── styles/
+│ │ ├── index.css
+│ │ └── theme.css
+│ │
+│ └── assets/
+│
+├── package.json
+├── vite.config.js
+└── README.md
+
+---
+
+## 🛠️ Built With
+
+- ⚛️ React
+- 🧠 useState
+- 🔄 useEffect
+- 💾 localStorage API
+- 🎨 CSS / Tailwind
+
+## 📦 Installation
 
 ```bash
-# Install dependencies
+git clone https://github.com/your-username/tic-tac-toe-react.git
+cd tic-tac-toe-react
 npm install
-
-# Start dev server
 npm run dev
+
 ```
 
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
+🧠 What This Project Demonstrates
 
-### Build for Production
+✔ Advanced React state management
+✔ Derived state calculations
+✔ Component-based architecture
+✔ Clean folder structure
+✔ Game logic separation
+✔ Persistent storage handling
+✔ AI logic implementation
+✔ Scalable design patterns
 
-```bash
-npm run build
-```
+🔮 Future Enhancements
 
----
+🧠 Minimax AI upgrade
 
-## How the AI Works
+🔊 Sound effects
 
-The AI uses the **Minimax algorithm** — it recursively simulates every possible future game state and picks the move that leads to the best outcome, assuming the opponent also plays optimally.
+🎬 Win animations
 
-**Scoring:**
-| Outcome | Score |
-|---------|-------|
-| AI (O) wins | +10 |
-| Player (X) wins | -10 |
-| Draw | 0 |
+🌍 Online multiplayer (Firebase / WebSockets)
 
-**Alpha-Beta Pruning** is applied to skip branches that can't possibly affect the final decision, making the search significantly faster.
+👨‍💻 Author
 
-**Difficulty — Moderate (10% blunder rate):**  
-Before calculating the best move, the AI rolls a 10% chance to play a completely random cell instead. This gives a skilled player a realistic (but slim) chance of winning.
+Muhammad Abdullah
+Frontend Developer | React Enthusiast
 
-To adjust difficulty, edit `src/utils/minimax.js`:
+💼 Building modern web applications
+🚀 Focused on performance, UI, and scalability
 
-```js
-// Line in getBestMove():
-if (Math.random() < 0.10) { ... }
-//                  ^^^^
-//   0.05 = harder (~5% win chance)
-//   0.10 = moderate (~10% win chance)  ← default
-//   0.25 = easier (~25% win chance)
-//   0.50 = random AI (easy)
-```
+⭐ Support
 
----
+If you like this project:
 
-## Hooks Overview
+🌟 Star the repository
+🍴 Fork it
+📢 Share it
 
-| Hook             | Responsibility                                                                                      |
-| ---------------- | --------------------------------------------------------------------------------------------------- |
-| `useGameLogic`   | Owns the board array, whose turn it is, win/draw state, and `loadSquares` for time-travel           |
-| `useGameHistory` | Stores the history stack and `stepIndex`; provides `pushMove` and `jumpTo`                          |
-| `useScoreboard`  | Reads/writes `{ X, O, draws }` to `localStorage`                                                    |
-| `useTheme`       | Toggles `data-theme` attribute on `<body>` and persists preference                                  |
-| `useAI`          | Side-effect hook — watches `isXTurn` and fires `getBestMove` after a 400ms delay when it's O's turn |
-
----
-
-## Tech Stack
-
-- **React 18** — hooks-based, no class components
-- **Vite** — dev server and bundler
-- **Vanilla CSS** — injected via `<style>` tag in `App.jsx`, using CSS custom properties for theming
-- **Google Fonts** — Bebas Neue (display) + DM Mono (body)
-- No external UI libraries
-
----
-
-## License
-
-MIT
+<p align="center"> Built with ❤️ and React </p>
