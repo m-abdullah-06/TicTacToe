@@ -106,8 +106,8 @@ src/
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe-react.git
-cd tic-tac-toe-react
+git clone https://github.com/your-username/TicTacToe.git
+cd TicTacToe
 npm install
 npm run dev
 
